@@ -1,6 +1,6 @@
 # ssBootstrap5
 
-A [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) and [HTML5 Boilerplate](http://html5boilerplate.com/).  Uses [Sass](http://sass-lang.com/documentation/_index.html) for CSS and [Bower](http://bower.io) to upgrade libraries.
+A SilverStripe theme using [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) & [HTML5 Boilerplate](http://html5boilerplate.com/).  Uses [Sass](http://sass-lang.com/documentation/_index.html) for compiling CSS and [Bower](http://bower.io) to upgrade libraries.
 
 ## Aims
 * to be able to upgrade Bootstrap and other javascript libraries to the latest version using Bower
@@ -16,15 +16,25 @@ A [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
     ...
     Requirements::css("public/css/main.css");
 
+    Requirements::javascript('//unpkg.com/@popperjs/core@2');
+
     Requirements::combine_files(
         'combine.js',
         [
-            'thirdparty/popper.min.js',
             'thirdparty/bower_components/bootstrap/js/dist/dom/data.js',
             'thirdparty/bower_components/bootstrap/js/dist/dom/event-handler.js',
             'thirdparty/bower_components/bootstrap/js/dist/dom/manipulator.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/config.js',
             'thirdparty/bower_components/bootstrap/js/dist/dom/selector-engine.js',
             'thirdparty/bower_components/bootstrap/js/dist/base-component.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/component-functions.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/index.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/backdrop.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/focustrap.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/sanitizer.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/scrollbar.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/swipe.js',
+            'thirdparty/bower_components/bootstrap/js/dist/util/template-factory.js',
             'thirdparty/bower_components/bootstrap/js/dist/alert.js',
             'thirdparty/bower_components/bootstrap/js/dist/button.js',
             'thirdparty/bower_components/bootstrap/js/dist/carousel.js',
@@ -32,8 +42,8 @@ A [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
             'thirdparty/bower_components/bootstrap/js/dist/dropdown.js',
             'thirdparty/bower_components/bootstrap/js/dist/modal.js',
             'thirdparty/bower_components/bootstrap/js/dist/offcanvas.js',
-            'thirdparty/bower_components/bootstrap/js/dist/tooltip.js',  // Needs popper.js
-            'thirdparty/bower_components/bootstrap/js/dist/popover.js', // Needs tooltip.js
+            'thirdparty/bower_components/bootstrap/js/dist/tooltip.js',
+            'thirdparty/bower_components/bootstrap/js/dist/popover.js',
             'thirdparty/bower_components/bootstrap/js/dist/scrollspy.js',
             'thirdparty/bower_components/bootstrap/js/dist/tab.js',
             'thirdparty/bower_components/bootstrap/js/dist/toast.js'
@@ -41,7 +51,7 @@ A [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
     );
 ```
 4. At the command line cd to `/public/thirdparty/` and `bower install bootstrap --save`
-5. If using the dropdown, tooltip or popovers get a copy of [Popper.js](https://popper.js.org) and save under the `thirdparty` folder.
+5. If using the dropdown, tooltip or popovers get a copy of [Popper.js](https://popper.js.org) or use a CDN.
 5. Run `/dev/build`.
 6. Optional
  * Favicon/icon: upload your icon through http://realfavicongenerator.net/ and copy the generated icons to your project root.
@@ -133,7 +143,8 @@ exports.serve = series(sassTask, serve);
  ```
 
 ## Changelog
-* Initial release bootstrap 5.01
+* Updated to Bootstrap 5.20
+* Initial release Bootstrap 5.01
 
 ## License
 [MIT](LICENSE)
