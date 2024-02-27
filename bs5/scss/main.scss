@@ -39,7 +39,7 @@ $grey-100: $gray-100;
 
         // for spacing the footer and the edge
         padding-right: 30px;
-        padding-left: 30px;  
+        padding-left: 30px;
     }
 }
 
@@ -81,7 +81,7 @@ html {
     @include media-breakpoint-up(sm) {  /* Small devices (tablets, 768px and up) */
         position: relative;
         min-height: 100%;
-    }   
+    }
 }
 
 body {
