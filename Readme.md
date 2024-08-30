@@ -46,7 +46,7 @@ A SilverStripe theme using [Bootstrap 5](https://getbootstrap.com/docs/5.0/getti
     use SilverStripe\View\Requirements;
     ...
     Requirements::css("public/css/main.css");
-    Requirements::javascript('//polyfill.io/v3/polyfill.min.js?features=Array.prototype.find,Promise,Object.assign,String.prototype.startsWith');  // for IE11 Popper
+    Requirements::javascript('//cdnjs.cloudflare.com/polyfill/v3/polyfill.js?version=4.8.0&features=Array.prototype.find%2CPromise%2CObject.assign%2CString.prototype.startsWith');  // for IE11 Popper
     Requirements::javascript('public/javascript/dist/main.js');
 ```
 6. Run your js bundle, saving to `public/javascript/dist` folder.  Example below from `package.json` using [esbuild](https://esbuild.github.io/getting-started/#your-first-bundle): 

@@ -22,7 +22,7 @@
 
     <body class="$ClassName<% if not $Menu(2) %> no-sidebar<% end_if %>" id="$URLSegment">
         <% include Header %>
-        <main class="main" role="main">
+        <main role="main">
             <div class="container-fluid <% if $Menu(2) || ClassName = BlogHolder || ClassName = BlogEntry %><% end_if %>" >
                 <% include BreadCrumbs %>
                 $Layout

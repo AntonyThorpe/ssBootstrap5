@@ -1,4 +1,4 @@
-<footer class="footer" role="contentinfo">
+<footer class="sticky-bottom" role="contentinfo">
 	<div class="container-fluid">
 		<div class="row">
 
